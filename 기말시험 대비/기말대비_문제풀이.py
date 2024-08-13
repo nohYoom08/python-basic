@@ -1,4 +1,4 @@
-11번
+#11번
 X=[]
 Y=[]
 for i in range(5):
@@ -59,7 +59,7 @@ print("Count =",cnt)
 
 
 
-19번
+#19번
 end_money=int(input())
 total=int(input())
 day=cnt=0
@@ -88,7 +88,7 @@ print("Money =",total)
 
 
 
-20번
+#20번
 n=int(input())
 price=int(input())
 
@@ -106,7 +106,7 @@ print("Total =",total)
 
 
 
-22번
+#22번
 n=int(input())
 P=[]
 M=[]
@@ -127,7 +127,7 @@ for i in range(len(M)):
 
 
 
-29번
+#29번
 n=int(input())
 cnt=sum1=sum2=0
 while n>0:
@@ -156,7 +156,7 @@ print("sum2 =",SUM2)
 
 
 
-30번
+#30번
 N=int(input())
 M=N
 ten=1
@@ -171,7 +171,7 @@ else:
     print("NO")
 
 
-31번
+#31번
 n=int(input())
 m=n
 summ=0
@@ -194,7 +194,7 @@ else:
 
 
 
-32번
+#32번
 n=int(input())
 ELDER=NORMAL=0
 for i in range(n):
@@ -218,7 +218,7 @@ print("Normal House =",NORMAL)
 
 
 
-33번
+#33번
 S=[]
 
 while True:
@@ -240,11 +240,11 @@ for i in range(len(S)):
     print(S[i],end="")
 
 
-//파이썬의 변수는 적어도 "문자 or 정수 및 실수" 이렇게 나뉜다. 이 둘 중 하나를 확실히 해줘야함
+#파이썬의 변수는 적어도 "문자 or 정수 및 실수" 이렇게 나뉜다. 이 둘 중 하나를 확실히 해줘야함
 
 
 
-34번
+#34번
 L=[]
 
 while True:
@@ -267,7 +267,7 @@ print(L)
 
 
 
-35번
+#35번
 M={}
 for i in range(3):
     name=input()
@@ -286,7 +286,7 @@ print("Total =",summ)
 
 
 
-36번
+#36번
 strike=spare=total=0
 
 for i in range(5):
@@ -343,12 +343,12 @@ for i in range(5):
 
     print("Set %d Score = %d"%(i+1,score))
 print("Total Score =",total)
-//n1 입력 받고 스패어 여부, 스트라이크 여부, none
-이후 n1이 12여부
-이후 n1+n2가 12여부
+#n1 입력 받고 스패어 여부, 스트라이크 여부, none
+#이후 n1이 12여부
+#이후 n1+n2가 12여부
 
 
-36번 개선안
+#36번 개선안
 strike=spare=total=0
 
 for i in range(5):
@@ -403,7 +403,7 @@ print("Total Score =",total)
     
 
 
-37번
+#37번
 Menu=[]
 CNT=[]
 cnt=0
@@ -431,22 +431,22 @@ while True:
             elif f==0:
                 break
 
-            f=0 //걍 무한루프 후딱 써 고민하지말구
+            f=0 #무한루프 과감하게 활용
 
         writer=input()
-        Menu.append([book,writer]) //딕셔너리는 걍 추가해도 되는데 리스트는 죽어도 안 되더라.
+        Menu.append([book,writer])
         print("New book added")
-        CNT.append(1) //하나씩 추가 될 때마다 관련 정보 리스트도 걍 같이 추가
+        CNT.append(1) #하나씩 추가 될 때마다 관련 정보 리스트도 같이 추가
 
     elif num==2:
-        for i in range(len(Menu)): //일단 중첩리스트의 길이는 1차원 기준으로 len 가능
+        for i in range(len(Menu)): #일단 중첩리스트의 길이는 1차원 기준으로 len 가능
             print("Book Id = %d. Name = %s. Author = %s. Rental = %d"
                   %(i+1,Menu[i][0],Menu[i][1],1-CNT[i])) //리스트의 의미를 다르게 해석해서 응용가능
             
 
     elif num==3:
         N=int(input())
-        if 0<N and N<=len(Menu): //문제 속에 숨겨진 2중 조건문 파악
+        if 0<N and N<=len(Menu): #문제 속에 숨겨진 2중 조건문 파악
             if CNT[N-1]==1:
                 CNT[N-1]=0
                 print("Rental Success")
